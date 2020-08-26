@@ -75,7 +75,7 @@ website->ifttt->twitter DATA[label="feedupdates"]%%feedupdates%%;
 {substack, blogs,websites}->website DATA[label="member-generated\nweb-content"]%%usercont%%;
 website->{github,discord} FUNCTION[label="create_post"]%%create_post%%;
 dns->netlify DATA[label="CNAME"]%%cname%%;
-website->forms DATA["minimal\nuser data"]%%newuserdata%%;
+website->forms DATA[label="minimal\nuser data"]%%newuserdata%%;
 forms->discord FUNCTION[label="invite"]%%invite%%;
 discord->welcomer DATA[label="newby"]%%newby%%;
 welcomer->discord FUNCTION[label="welcoming"]%%welcoming%%;
