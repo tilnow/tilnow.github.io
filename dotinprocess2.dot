@@ -1,10 +1,32 @@
+#a dot file which includes all our IT infrastructure
+#unlike standard dot, we have some macros here
+# %%XXX%%% means there is a file XXX.md with explanation. all items AND links should have one, so please create
+# some keywords in uppercase, like [shape=rectangle][color=blue], [color=red], [shape=egg][color=green] are defined in replacings.sed and contain formatting instructions
+# all other dot thingees apply
+# rendering is using plain dot
 
 digraph G {
-
-
-github %%github%%[shape=rectangle][color=blue];
-netlify %%netlify%%[shape=rectangle][color=green];
-jekyll %%jekyll%%[shape=rectangle][color=blue];
+labelloc="t";
+label="map of yak collective IT infrastructure (work in progress)";
+gmail [shape=egg][color=green][label="yakcollective.org@gmail.com"]%%gmail%%;
+calandar [shape=doublecircle][color=green][label="google calandar"]%%calandar%%;
+docs [shape=doublecircle][color=green][label="google docs"]%%docs%%;
+forms [shape=doublecircle][color=green][label="registration form"]%%forms%%;
+ifttt [shape=egg][color=green][label="IFTT"]%%ifttt%%;
+carl [shape=egg][color=green][label="Carl"]%%carl%%;
+discord [shape=doublecircle][color=green][label="Discord"]%%discord%%;
+dns [shape=egg][color=green][label="Namecheap"]%%dns%%;
+roam [shape=doublecircle][color=green][label="Roam"]%%roam%%;
+substack [shape=triangle][color=green][label="Substack"]%%substack%%;
+blogs [shape=triangle][color=green][label="member blogs"]%%blogs%%;
+websites [shape=triangle][color=green][label="member websites"]%%websites%%;
+twitter [shape=egg][color=green][label="Twitter"]%%twitter%%;
+facebook [shape=egg][color=green][label="Facebook"]%%facebook%%;
+linkedin [shape=egg][color=green][label="Linkedin"]%%linkedin%%;
+knack [shape=doublecircle][color=green][label="Knack"]%%knack%%;
+github [shape=egg][color=green]%%github%%;
+netlify [shape=egg][color=green]%%netlify%%;
+jekyll [shape=rectangle][color=blue]%%jekyll%%;
 github->jekyll [color=red][label="md files"]%%mdfiles%%;
 jekyll->netlify [color=red] [label="rendered website"]%%rendered website%%;
 netlify->web [color=red][label="our website"]%%website%%;
