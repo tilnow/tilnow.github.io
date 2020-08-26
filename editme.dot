@@ -88,5 +88,5 @@ calandar->carl FUNCTION[label="calandar yak"]%%calbot%%;
 carl->discord DATA[label="reminders"]%%reminders%%;
 github->jekyll DATA[label="md files\nand others"]%%mdfiles%%;
 jekyll->netlify DATA [label="Rendered\nwebsite"]%%rendered website%%;
-netlify->Internet DATA[label="Deploy"]%%deploy%%;
+netlify->internet DATA[label="Deploy"]%%deploy%%;
 }
