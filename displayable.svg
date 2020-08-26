@@ -30,9 +30,15 @@
 <!-- github&#45;&gt;jekyll -->
 <g id="edge1" class="edge">
 <title>github&#45;&gt;jekyll</title>
+<g id="a_edge1"><a xlink:href="https://tilnow.github.io/mdfiles.html" xlink:title="md files">
 <path fill="none" stroke="#ff0000" d="M27,-260.9735C27,-249.1918 27,-233.5607 27,-220.1581"/>
 <polygon fill="#ff0000" stroke="#ff0000" points="30.5001,-220.0033 27,-210.0034 23.5001,-220.0034 30.5001,-220.0033"/>
+</a>
+</g>
+<g id="a_edge1&#45;label"><a xlink:href="https://tilnow.github.io/mdfiles.html" xlink:title="md files">
 <text text-anchor="middle" x="50" y="-231.8" font-family="Times,serif" font-size="14.00" fill="#000000">md files</text>
+</a>
+</g>
 </g>
 <!-- netlify -->
 <g id="node2" class="node">
@@ -52,7 +58,7 @@
 <!-- netlify&#45;&gt;web -->
 <g id="edge3" class="edge">
 <title>netlify&#45;&gt;web</title>
-<g id="a_edge3"><a xlink:href="https://tilnow.github.io/rendered website.html" xlink:title="our website">
+<g id="a_edge3"><a xlink:href="https://tilnow.github.io/website.html" xlink:title="our website">
 <path fill="none" stroke="#ff0000" d="M27,-86.9735C27,-75.1918 27,-59.5607 27,-46.1581"/>
 <polygon fill="#ff0000" stroke="#ff0000" points="30.5001,-46.0033 27,-36.0034 23.5001,-46.0034 30.5001,-46.0033"/>
 </a>
@@ -65,9 +71,15 @@
 <!-- jekyll&#45;&gt;netlify -->
 <g id="edge2" class="edge">
 <title>jekyll&#45;&gt;netlify</title>
+<g id="a_edge2"><a xlink:href="https://tilnow.github.io/rendered website.html" xlink:title="rendered website">
 <path fill="none" stroke="#ff0000" d="M27,-173.9735C27,-162.1918 27,-146.5607 27,-133.1581"/>
 <polygon fill="#ff0000" stroke="#ff0000" points="30.5001,-133.0033 27,-123.0034 23.5001,-133.0034 30.5001,-133.0033"/>
+</a>
+</g>
+<g id="a_edge2&#45;label"><a xlink:href="https://tilnow.github.io/rendered website.html" xlink:title="rendered website">
 <text text-anchor="middle" x="73.5" y="-144.8" font-family="Times,serif" font-size="14.00" fill="#000000">rendered website</text>
+</a>
+</g>
 </g>
 </g>
 </svg>

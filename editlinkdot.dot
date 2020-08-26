@@ -5,8 +5,8 @@ digraph G {
 github [URL="https://github.com/tilnow/tilnow.github.io/edit/master/github.md"][shape=rectangle][color=blue];
 netlify [URL="https://github.com/tilnow/tilnow.github.io/edit/master/netlify.md"][shape=rectangle][color=green];
 jekyll [URL="https://github.com/tilnow/tilnow.github.io/edit/master/jekyll.md"][shape=rectangle][color=blue];
-github->jekyll [color=red][label="md files"];
-jekyll->netlify [color=red] [label="rendered website"];
+github->jekyll [color=red][label="md files"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/mdfiles.md"];
+jekyll->netlify [color=red] [label="rendered website"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/rendered website.md"];
 netlify->web [color=red][label="our website"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/website.md"];
 
 }
