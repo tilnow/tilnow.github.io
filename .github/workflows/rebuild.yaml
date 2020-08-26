@@ -23,7 +23,7 @@ jobs:
           echo before # should use a sed script file, will change after debugging
           sudo apt-get install graphviz
           sudo apt-get install markdown
-          bash after
+          echo after
       - name: step 1 macro-process dotfile
         run: |
           set -x
@@ -32,36 +32,41 @@ jobs:
           sed -E "s/(WEBSERVICE)/[shape=rectangle][color=green]/" editme.dot > dotinprocess.dot
           sed -E "s/(TOOL)/[shape=rectangle][color=blue]/" dotinprocess.dot > dotinprocess.dot
           sed -E "s/(DATA)/[color=red]/" editme.dot > dotinprocess.dot
-          bash after
+          echo after
       - name: step 2 make two dotfiles
         run: |
           set -x
           set -v
+          echo before
           sed -E "s/%%([a-zA-Z0-9\/-])%%/https:\/\/github.com\/tilnow\/tilnow.github.io\/edit\/\1.md/" dotinprocess.dot > editlinkdot.dot
           sed -E "s/%%([a-zA-Z0-9\/-])%%/https:\/\/raw.githubusercontent.com\/tilnow\/tilnow.github.io\/master\/\1.html/" dotinprocess.dot > showlinkdot.dot
-          bash after
+          echo after
       - name: step 3 build two svgs
         run: |
           set -x
           set -v
+          echo before
           dot -Tsvg editlinkdot.dot -o editable.svg
           dot -Tsvg showlinkdot.dot -o displayable.svg
-          bash after
+          echo after
       - name: step 4 process markdowns
         run: |
           set -x
           set -v
+          echo before
           for file in *.md; do 
           echo "processing $file"
           markdown "$file" > "${file%.md}.html"; 
           done
-          bash after
+          echo after
       - name: step 5 update file with link file
         run: |
+            echo before
             #echo ___ > .gitignore - not clear what to ignore at this point
             git config user.name tilnow
             git config user.email tilnowah@gmail.com
             git add .
             git commit -m "updated dotfile"
-            git push  
+            git push 
+            echo after 
 
