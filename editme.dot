@@ -1,10 +1,32 @@
+#a dot file which includes all our IT infrastructure
+#unlike standard dot, we have some macros here
+# %%XXX%%% means there is a file XXX.md with explanation. all items AND links should have one, so please create
+# some keywords in uppercase, like TOOL, DATA, WEBSERVICE are defined in replacings.sed and contain formatting instructions
+# all other dot thingees apply
+# rendering is using plain dot
 
 digraph G {
-
-
-github %%github%%TOOL;
-netlify %%netlify%%WEBSERVICE;
-jekyll %%jekyll%%TOOL;
+labelloc="t";
+label="map of yak collective IT infrastructure (work in progress)";
+gmail WEBSERVICE[label="yakcollective.org@gmail.com"]%%gmail%%;
+calandar WEBSITE[label="google calandar"]%%calandar%%;
+docs WEBSITE[label="google docs"]%%docs%%;
+forms WEBSITE[label="registration form"]%%forms%%;
+ifttt WEBSERVICE[label="IFTT"]%%ifttt"%%
+carl WEBSERVICE[label="Carl"]%%carl%%;
+discord WEBSITE[label="Discord"]%%discord%%;
+dns WEBSERVICE[label="Namecheap"]%%dns%%;
+roam WEBSITE[label="Roam"]%%roam%%;
+substack USERSITE[label="Substack"]%%substack%%;
+blogs USERSITE[label="member blogs"]%%blogs%%;
+websites USERSITE[label="member websites"]%%websites%%;
+twitter WEBSERVICE[label="Twitter"]%%twitter%%;
+facebook WEBSERVICE[label="Facebook"]%%facebook%%;
+linkedin WEBSERVICE[label="Linkedin"]%%linkedin%%;
+knack WEBSITE[label="Knack"]%%knack%%;
+github WEBSERVICE%%github%%;
+netlify WEBSERVICE%%netlify%%;
+jekyll TOOL%%jekyll%%;
 github->jekyll DATA[label="md files"]%%mdfiles%%;
 jekyll->netlify DATA [label="rendered website"]%%rendered website%%;
 netlify->web DATA[label="our website"]%%website%%;
