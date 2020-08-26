@@ -22,12 +22,21 @@ netlify WEBSERVICE[label="Netlify"]%%netlify%%;
 jekyll TOOL[label="Jekyll"]%%jekyll%%;
 internet WEBSERVICE[label="Internet"]%%internet%%;
 carl WEBSERVICE[label="Carl"]%%carl%%;
-website WEBSITE[label="Yakcollective.org"]%%website%%
+
 discord WEBSITE[label="Discord"]%%discord%%;
 twitter WEBSERVICE[label="Twitter"]%%twitter%%;
 
 welcomer TOOL[label="welcome bot"]%%welcomer%%
 yakyak TOOL[label="yakyak carl-bot"]%%yakyak%%
+
+#the website
+subgraph cluster_4 {
+  #labelloc="t";
+  #label="website functionality";
+  website WEBSITE[label="Yakcollective.org"]%%website%%;
+  netlifyrt WEBSERVICE[label="netlify\nbackending"]%%netlifyrt%%; 
+
+}
 
 #things i do not know how to connect 
 subgraph cluster_0 {
@@ -72,8 +81,8 @@ subgraph cluster_3 {
 
 #links
 website->ifttt->twitter DATA[label="feedupdates"]%%feedupdates%%;
-{substack, blogs,websites}->website DATA[label="member-generated\nweb-content"]%%usercont%%;
-website->{github,discord} FUNCTION[label="create_post"]%%create_post%%;
+{substack, blogs,websites}->netlifyrt DATA[label="member-generated\nweb-content"]%%usercont%%;
+netlifyrt->{github,discord} FUNCTION[label="create_post"]%%create_post%%;
 dns->netlify DATA[label="CNAME"]%%cname%%;
 website->forms DATA[label="minimal\nuser data"]%%newuserdata%%;
 forms->discord FUNCTION[label="invite"]%%invite%%;
