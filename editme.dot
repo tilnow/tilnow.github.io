@@ -8,7 +8,9 @@
 digraph G {
 labelloc="t";
 label="map of yak collective IT infrastructure (work in progress)";
-gmail WEBSERVICE[label="yakcollective.org\n@gmail.com"]%%gmail%%;
+
+#components
+
 calandar WEBSITE[label="google\ncalandar"]%%calandar%%;
 docs WEBSITE[label="google docs"]%%docs%%;
 forms WEBSITE[label="registration\nform"]%%forms%%;
@@ -19,16 +21,30 @@ dns WEBSERVICE[label="Namecheap"]%%dns%%;
 roam WEBSITE[label="Roam"]%%roam%%;
 substack USERSITE[label="Substack"]%%substack%%;
 blogs USERSITE[label="member\nblogs"]%%blogs%%;
+website WEBSITE[label="Yakcollective.org"]%%website%%
 websites USERSITE[label="member\nwebsites"]%%websites%%;
 twitter WEBSERVICE[label="Twitter"]%%twitter%%;
-facebook WEBSERVICE[label="Facebook"]%%facebook%%;
-linkedin WEBSERVICE[label="Linkedin"]%%linkedin%%;
 knack WEBSITE[label="Knack"]%%knack%%;
-github WEBSERVICE%%github%%;
-netlify WEBSERVICE%%netlify%%;
-jekyll TOOL%%jekyll%%;
-github->jekyll DATA[label="md files"]%%mdfiles%%;
-jekyll->netlify DATA [label="rendered website"]%%rendered website%%;
-netlify->web DATA[label="our website"]%%website%%;
+github WEBSERVICE[label="GitHub"]%%github%%;
+netlify WEBSERVICE[label="Netlify"]%%netlify%%;
+jekyll TOOL[label="Jekyll"]%%jekyll%%;
+internet TOOL[label="Internet"]%%internet%%;
 
+#things not connected by IT with rest of infrastructure and managed seperatly and not used by members
+subgraph cluster_0 {
+  labelloc="t";
+  label="unconnected and manually managed\nnot by members";
+
+  gmail WEBSERVICE[label="yakcollective.org\n@gmail.com"]%%gmail%%;
+  facebook WEBSERVICE[label="Facebook"]%%facebook%%;
+  linkedin WEBSERVICE[label="Linkedin"]%%linkedin%%;
+}
+#links
+docs->website FUNCTION[label="host\nprojects"]%%hostproj%%; 
+calandar->carl FUNCTION[label="calandar bot"]%%calbot%%;
+carl->discord DATA[label="reminders"]%%reminders%%;
+github->jekyll DATA[label="md files\nand others"]%%mdfiles%%;
+jekyll->netlify DATA [label="Rendered\nwebsite"]%%rendered website%%;
+netlify->Internet DATA[label="Deploy"]%%deploy%%;
+ifttt
 }
