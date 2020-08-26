@@ -1,11 +1,12 @@
 
 digraph G {
 
-github [shape=rectangle][color=blue];
-netlify [shape=rectangle][color=green];
-jekyll [shape=rectangle][color=blue];
+
+github %%github%%[shape=rectangle][color=blue];
+netlify %%netlify%%[shape=rectangle][color=green];
+jekyll %%jekyll%%[shape=rectangle][color=blue];
 github->jekyll DATA[label="md files"];
 jekyll->netlify DATA [label="rendered website"];
-netlify->web DATA[label="our website"];
+netlify->web DATA[label="our website"]%%website%%;
 
 }

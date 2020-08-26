@@ -1,11 +1,12 @@
 
 digraph G {
 
-github [URL=https://github.com/tilnow/tilnow.github.io/edit/stam.md][shape=rectangle][color=blue];
-netlify [shape=rectangle][color=green];
-jekyll [shape=rectangle][color=blue];
+
+github [URL="https://github.com/tilnow/tilnow.github.io/edit/github.md"][shape=rectangle][color=blue];
+netlify [URL="https://github.com/tilnow/tilnow.github.io/edit/netlify.md"][shape=rectangle][color=green];
+jekyll [URL="https://github.com/tilnow/tilnow.github.io/edit/jekyll.md"][shape=rectangle][color=blue];
 github->jekyll [color=red][label="md files"];
 jekyll->netlify [color=red] [label="rendered website"];
-netlify->web [color=red][label="our website"];
+netlify->web [color=red][label="our website"][URL="https://github.com/tilnow/tilnow.github.io/edit/website.md"];
 
 }
