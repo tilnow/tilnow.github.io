@@ -31,8 +31,8 @@ yakyak TOOL[label="yakyak carl-bot"]%%yakyak%%
 
 #the website
 subgraph cluster_4 {
-  #labelloc="t";
-  #label="website functionality";
+  labelloc="t";
+  label="website functionality";
   website WEBSITE[label="Yakcollective.org"]%%website%%;
   netlifyrt WEBSERVICE[label="netlify\nbackending"]%%netlifyrt%%; 
 
@@ -97,5 +97,5 @@ calandar->carl FUNCTION[label="calandar yak"]%%calbot%%;
 carl->discord DATA[label="reminders"]%%reminders%%;
 github->jekyll DATA[label="md files\nand others"]%%mdfiles%%;
 jekyll->netlify DATA [label="Rendered\nwebsite"]%%rendered website%%;
-netlify->internet DATA[label="Deploy"]%%deploy%%;
+netlify->{internet,website} DATA[label="Deploy"]%%deploy%%;
 }
