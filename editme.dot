@@ -11,27 +11,35 @@ label="map of yak collective IT infrastructure (work in progress)";
 
 #components
 
+
 calandar WEBSITE[label="google\ncalandar"]%%calandar%%;
 docs WEBSITE[label="google docs"]%%docs%%;
 forms WEBSITE[label="registration\nform"]%%forms%%;
 ifttt WEBSERVICE[label="IFTT"]%%ifttt%%;
-carl WEBSERVICE[label="Carl"]%%carl%%;
-discord WEBSITE[label="Discord"]%%discord%%;
 dns WEBSERVICE[label="Namecheap"]%%dns%%;
-roam WEBSITE[label="Roam"]%%roam%%;
-substack USERSITE[label="Substack"]%%substack%%;
-blogs USERSITE[label="member\nblogs"]%%blogs%%;
-website WEBSITE[label="Yakcollective.org"]%%website%%
-websites USERSITE[label="member\nwebsites"]%%websites%%;
-twitter WEBSERVICE[label="Twitter"]%%twitter%%;
-knack WEBSITE[label="Knack"]%%knack%%;
 github WEBSERVICE[label="GitHub"]%%github%%;
 netlify WEBSERVICE[label="Netlify"]%%netlify%%;
 jekyll TOOL[label="Jekyll"]%%jekyll%%;
 internet TOOL[label="Internet"]%%internet%%;
+carl WEBSERVICE[label="Carl"]%%carl%%;
+website WEBSITE[label="Yakcollective.org"]%%website%%
+discord WEBSITE[label="Discord"]%%discord%%;
+twitter WEBSERVICE[label="Twitter"]%%twitter%%;
+
+welcomer TOOL[label="welcome bot"]%%welcomer%%
+yakyak TOOL[label="yakyak carl-bot"]%%yakyak%%
+
+#things i do not know how to connect 
+subgraph cluster_0 {
+  labelloc="t";
+  label="not sure what connection is (yet)";
+
+  zapier WEBSERVICE[label="Zapier"]%%zapier%%;
+
+}
 
 #things not connected by IT with rest of infrastructure and managed seperatly and not used by members
-subgraph cluster_0 {
+subgraph cluster_1 {
   labelloc="t";
   label="unconnected and manually managed\nnot by members";
 
@@ -39,12 +47,46 @@ subgraph cluster_0 {
   facebook WEBSERVICE[label="Facebook"]%%facebook%%;
   linkedin WEBSERVICE[label="Linkedin"]%%linkedin%%;
 }
+
+#things in process of connection with rest of infrastructure 
+subgraph cluster_2 {
+  labelloc="t";
+  label="in next version or two should be connected";
+
+  knack WEBSITE[label="Knack"]%%knack%%;
+  roam WEBSITE[label="Roam"]%%roam%%;
+  yak_scraper TOOL[label="yak_scraper"]%%yak_scraper%%
+
+}
+
+#things that represent user generated data on web 
+subgraph cluster_3 {
+  labelloc="t";
+  label="members' web presence";
+
+  substack USERSITE[label="Substack"]%%substack%%;
+  blogs USERSITE[label="member\nblogs"]%%blogs%%;
+  websites USERSITE[label="member\nwebsites"]%%websites%%;
+
+}
+
 #links
+website->ifttt->twitter DATA[label="feedupdates"]%%feedupdates%%;
+{substack, blogs,websites}->website DATA[label="member-generated\nweb-content"]%%usercont%%;
+website->{github,discord} FUNCTION[label="create_post"]%%create_post%%;
+dns->netlify DATA[label="CNAME"]%%cname%%;
+website->forms DATA["minimal\nuser data"]%%newuserdata%%;
+forms->discord FUNCTION[label="invite"]%%invite%%;
+discord->welcomer DATA[label="newby"]%%newby%%;
+welcomer->discord FUNCTION[label="welcoming"]%%welcoming%%;
+discord->yakyak DATA[label="newby"]%%newby%%;
+yakyak->discord FUNCTION[label="prune"]%%prune%%;
+
+welcomer->discord FUNCTION[label="welcome\nnew user"]%%welcoming%%
 docs->website FUNCTION[label="host\nprojects"]%%hostproj%%; 
-calandar->carl FUNCTION[label="calandar bot"]%%calbot%%;
+calandar->carl FUNCTION[label="calandar yak"]%%calbot%%;
 carl->discord DATA[label="reminders"]%%reminders%%;
 github->jekyll DATA[label="md files\nand others"]%%mdfiles%%;
 jekyll->netlify DATA [label="Rendered\nwebsite"]%%rendered website%%;
 netlify->Internet DATA[label="Deploy"]%%deploy%%;
-ifttt
 }
