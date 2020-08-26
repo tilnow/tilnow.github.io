@@ -3,3 +3,4 @@ s/(WEBSERVICE)/[shape=egg][color=green]/ #mainly used to transform data. of cour
 s/(USERSITE)/[shape=triangle][color=green]/ #something individual members deal with indepdnent of YC
 s/(TOOL)/[shape=rectangle][color=blue]/ # a software tool
 s/(DATA)/[color=red]/ #data
+s/(FUNCTION)/[color=black]/ #a function
