@@ -1,0 +1,66 @@
+#build new version of pages
+#this means:
+#0 setup dot
+#1 preprocess dotfile using sed to replace node and link type definitions
+#2 preprocess dotfile using sed to create two dotfiles, one with show links and one with edit links
+#3 build two svgs,one for show and one for edit, using dot
+#4 run markdown on all md files to make html versions
+#5 push to repository
+#5 in future put all of this into _site which will be page actually served
+name: BUILD_DOC
+on:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v2
+    - name: step 0 setup graphiz & markdown
+      run: |
+        set -x
+        set -v
+        echo before # should use a sed script file, will change after debugging
+        sudo apt-get install graphiz
+        sudo apt-get install markdown
+        bash after
+    - name: step 1 macro-process dotfile
+      run: |
+        set -x
+        set -v
+        echo before # should use a sed script file, will change after debugging
+        sed -E "s/(WEBSERVICE)/[shape=rectangle][color=green]/" editme.dot > dotinprocess.dot
+        sed -E "s/(TOOL)/[shape=rectangle][color=blue]/" dotinprocess.dot > dotinprocess.dot
+        sed -E "s/(DATA)/[color=red]/" editme.dot > dotinprocess.dot
+        bash after
+    - name: step 2 make two dotfiles
+      run: |
+        set -x
+        set -v
+        sed -E "s/%%([a-zA-Z0-9\/-])%%/https:\/\/github.com\/tilnow\/tilnow.github.io\/edit\/\1.md/" dotinprocess.dot > editlinkdot.dot
+        sed -E "s/%%([a-zA-Z0-9\/-])%%/https:\/\/raw.githubusercontent.com\/tilnow\/tilnow.github.io\/master\/\1.html/" dotinprocess.dot > showlinkdot.dot
+        bash after
+    - name: step 3 build two svgs
+      run: |
+        set -x
+        set -v
+        dot -Tsvg editlinkdot.dot -o editable.svg
+        dot -Tsvg showlinkdot.dot -o displayable.svg
+        bash after
+    - name: step 4 process markdowns
+      run: |
+        set -x
+        set -v
+        for file in *.md; do 
+        echo "processing $file"
+        markdown "$file" > "${file%.md}.html"; 
+        done
+        bash after
+    - name: step 5 update file with link file
+      run: |
+          #echo ___ > .gitignore - not clear what to ignore at this point
+          git config user.name tilnow
+          git config user.email tilnowah@gmail.com
+          git add .
+          git commit -m "updated dotfile"
+          git push  
+
