@@ -38,8 +38,8 @@ jobs:
           set -x
           set -v
           echo before
-          sed -E "s/%%([a-zA-Z0-9\/-])%%/https:\/\/github.com\/tilnow\/tilnow.github.io\/edit\/\1.md/" dotinprocess.dot > editlinkdot.dot
-          sed -E "s/%%([a-zA-Z0-9\/-])%%/https:\/\/raw.githubusercontent.com\/tilnow\/tilnow.github.io\/master\/\1.html/" dotinprocess.dot > showlinkdot.dot
+          sed -E "s/%%([a-zA-Z0-9\/-])%%/[URL=https:\/\/github.com\/tilnow\/tilnow.github.io\/edit\/\1.md]/" dotinprocess.dot > editlinkdot.dot
+          sed -E "s/%%([a-zA-Z0-9\/-])%%/[URL=https:\/\/raw.githubusercontent.com\/tilnow\/tilnow.github.io\/master\/\1.html]/" dotinprocess.dot > showlinkdot.dot
           echo after
       - name: step 3 build two svgs
         run: |
