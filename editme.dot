@@ -5,8 +5,8 @@ digraph G {
 github %%github%%TOOL;
 netlify %%netlify%%WEBSERVICE;
 jekyll %%jekyll%%TOOL;
-github->jekyll DATA[label="md files"];
-jekyll->netlify DATA [label="rendered website"];
+github->jekyll DATA[label="md files"]%%mdfiles%%;
+jekyll->netlify DATA [label="rendered website"]%%rendered website%%;
 netlify->web DATA[label="our website"]%%website%%;
 
 }
