@@ -2,11 +2,11 @@
 digraph G {
 
 
-github [URL="https://raw.githubusercontent.com/tilnow/tilnow.github.io/master/github.html"][shape=rectangle][color=blue];
-netlify [URL="https://raw.githubusercontent.com/tilnow/tilnow.github.io/master/netlify.html"][shape=rectangle][color=green];
-jekyll [URL="https://raw.githubusercontent.com/tilnow/tilnow.github.io/master/jekyll.html"][shape=rectangle][color=blue];
+github [URL="https://tilnow.github.io/github.html"][shape=rectangle][color=blue];
+netlify [URL="https://tilnow.github.io/netlify.html"][shape=rectangle][color=green];
+jekyll [URL="https://tilnow.github.io/jekyll.html"][shape=rectangle][color=blue];
 github->jekyll [color=red][label="md files"];
 jekyll->netlify [color=red] [label="rendered website"];
-netlify->web [color=red][label="our website"][URL="https://raw.githubusercontent.com/tilnow/tilnow.github.io/master/website.html"];
+netlify->web [color=red][label="our website"][URL="https://tilnow.github.io/website.html"];
 
 }

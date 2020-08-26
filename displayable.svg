@@ -12,7 +12,7 @@
 <!-- github -->
 <g id="node1" class="node">
 <title>github</title>
-<g id="a_node1"><a xlink:href="https://raw.githubusercontent.com/tilnow/tilnow.github.io/master/github.html" xlink:title="github">
+<g id="a_node1"><a xlink:href="https://tilnow.github.io/github.html" xlink:title="github">
 <polygon fill="none" stroke="#0000ff" points="54,-297 0,-297 0,-261 54,-261 54,-297"/>
 <text text-anchor="middle" x="27" y="-275.3" font-family="Times,serif" font-size="14.00" fill="#000000">github</text>
 </a>
@@ -21,7 +21,7 @@
 <!-- jekyll -->
 <g id="node3" class="node">
 <title>jekyll</title>
-<g id="a_node3"><a xlink:href="https://raw.githubusercontent.com/tilnow/tilnow.github.io/master/jekyll.html" xlink:title="jekyll">
+<g id="a_node3"><a xlink:href="https://tilnow.github.io/jekyll.html" xlink:title="jekyll">
 <polygon fill="none" stroke="#0000ff" points="54,-210 0,-210 0,-174 54,-174 54,-210"/>
 <text text-anchor="middle" x="27" y="-188.3" font-family="Times,serif" font-size="14.00" fill="#000000">jekyll</text>
 </a>
@@ -37,7 +37,7 @@
 <!-- netlify -->
 <g id="node2" class="node">
 <title>netlify</title>
-<g id="a_node2"><a xlink:href="https://raw.githubusercontent.com/tilnow/tilnow.github.io/master/netlify.html" xlink:title="netlify">
+<g id="a_node2"><a xlink:href="https://tilnow.github.io/netlify.html" xlink:title="netlify">
 <polygon fill="none" stroke="#00ff00" points="54,-123 0,-123 0,-87 54,-87 54,-123"/>
 <text text-anchor="middle" x="27" y="-101.3" font-family="Times,serif" font-size="14.00" fill="#000000">netlify</text>
 </a>
@@ -52,12 +52,12 @@
 <!-- netlify&#45;&gt;web -->
 <g id="edge3" class="edge">
 <title>netlify&#45;&gt;web</title>
-<g id="a_edge3"><a xlink:href="https://raw.githubusercontent.com/tilnow/tilnow.github.io/master/website.html" xlink:title="our website">
+<g id="a_edge3"><a xlink:href="https://tilnow.github.io/website.html" xlink:title="our website">
 <path fill="none" stroke="#ff0000" d="M27,-86.9735C27,-75.1918 27,-59.5607 27,-46.1581"/>
 <polygon fill="#ff0000" stroke="#ff0000" points="30.5001,-46.0033 27,-36.0034 23.5001,-46.0034 30.5001,-46.0033"/>
 </a>
 </g>
-<g id="a_edge3&#45;label"><a xlink:href="https://raw.githubusercontent.com/tilnow/tilnow.github.io/master/website.html" xlink:title="our website">
+<g id="a_edge3&#45;label"><a xlink:href="https://tilnow.github.io/website.html" xlink:title="our website">
 <text text-anchor="middle" x="59" y="-57.8" font-family="Times,serif" font-size="14.00" fill="#000000">our website</text>
 </a>
 </g>
