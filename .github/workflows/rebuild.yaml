@@ -65,11 +65,13 @@ jobs:
       - name: step 5 update file with link file
         run: |
             echo before
+            touch -a index.html #so that it will work if we manually changed something on website
             #echo ___ > .gitignore - not clear what to ignore at this point
             git config user.name tilnow
             git config user.email tilnowah@gmail.com
             git add .
-            git commit -m "updated dotfile"
+            number=$(date "+%s")
+            git commit -m "updated dotfile $number"
             git push 
             echo after 
 
