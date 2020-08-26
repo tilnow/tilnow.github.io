@@ -67,7 +67,7 @@ jobs:
           rm editlinkdot.dot
           rm showlinkdot.dot
           echo after
-      - name: step 5 update file with link file
+      - name: step 5 push new html pages and new svg files to github for publication
         run: |
             echo before
             touch -a index.html #so that it will work if we ran from branch 
