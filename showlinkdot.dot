@@ -8,18 +8,18 @@
 digraph G {
 labelloc="t";
 label="map of yak collective IT infrastructure (work in progress)";
-gmail [shape=egg][color=green][label="yakcollective.org@gmail.com"][URL="https://tilnow.github.io/gmail.html"];
-calandar [shape=doublecircle][color=green][label="google calandar"][URL="https://tilnow.github.io/calandar.html"];
+gmail [shape=egg][color=green][label="yakcollective.org\n@gmail.com"][URL="https://tilnow.github.io/gmail.html"];
+calandar [shape=doublecircle][color=green][label="google\ncalandar"][URL="https://tilnow.github.io/calandar.html"];
 docs [shape=doublecircle][color=green][label="google docs"][URL="https://tilnow.github.io/docs.html"];
-forms [shape=doublecircle][color=green][label="registration form"][URL="https://tilnow.github.io/forms.html"];
+forms [shape=doublecircle][color=green][label="registration\nform"][URL="https://tilnow.github.io/forms.html"];
 ifttt [shape=egg][color=green][label="IFTT"][URL="https://tilnow.github.io/ifttt.html"];
 carl [shape=egg][color=green][label="Carl"][URL="https://tilnow.github.io/carl.html"];
 discord [shape=doublecircle][color=green][label="Discord"][URL="https://tilnow.github.io/discord.html"];
 dns [shape=egg][color=green][label="Namecheap"][URL="https://tilnow.github.io/dns.html"];
 roam [shape=doublecircle][color=green][label="Roam"][URL="https://tilnow.github.io/roam.html"];
 substack [shape=triangle][color=green][label="Substack"][URL="https://tilnow.github.io/substack.html"];
-blogs [shape=triangle][color=green][label="member blogs"][URL="https://tilnow.github.io/blogs.html"];
-websites [shape=triangle][color=green][label="member websites"][URL="https://tilnow.github.io/websites.html"];
+blogs [shape=triangle][color=green][label="member\nblogs"][URL="https://tilnow.github.io/blogs.html"];
+websites [shape=triangle][color=green][label="member\nwebsites"][URL="https://tilnow.github.io/websites.html"];
 twitter [shape=egg][color=green][label="Twitter"][URL="https://tilnow.github.io/twitter.html"];
 facebook [shape=egg][color=green][label="Facebook"][URL="https://tilnow.github.io/facebook.html"];
 linkedin [shape=egg][color=green][label="Linkedin"][URL="https://tilnow.github.io/linkedin.html"];

@@ -8,18 +8,18 @@
 digraph G {
 labelloc="t";
 label="map of yak collective IT infrastructure (work in progress)";
-gmail [shape=egg][color=green][label="yakcollective.org@gmail.com"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/gmail.md"];
-calandar [shape=doublecircle][color=green][label="google calandar"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/calandar.md"];
+gmail [shape=egg][color=green][label="yakcollective.org\n@gmail.com"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/gmail.md"];
+calandar [shape=doublecircle][color=green][label="google\ncalandar"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/calandar.md"];
 docs [shape=doublecircle][color=green][label="google docs"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/docs.md"];
-forms [shape=doublecircle][color=green][label="registration form"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/forms.md"];
+forms [shape=doublecircle][color=green][label="registration\nform"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/forms.md"];
 ifttt [shape=egg][color=green][label="IFTT"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/ifttt.md"];
 carl [shape=egg][color=green][label="Carl"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/carl.md"];
 discord [shape=doublecircle][color=green][label="Discord"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/discord.md"];
 dns [shape=egg][color=green][label="Namecheap"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/dns.md"];
 roam [shape=doublecircle][color=green][label="Roam"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/roam.md"];
 substack [shape=triangle][color=green][label="Substack"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/substack.md"];
-blogs [shape=triangle][color=green][label="member blogs"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/blogs.md"];
-websites [shape=triangle][color=green][label="member websites"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/websites.md"];
+blogs [shape=triangle][color=green][label="member\nblogs"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/blogs.md"];
+websites [shape=triangle][color=green][label="member\nwebsites"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/websites.md"];
 twitter [shape=egg][color=green][label="Twitter"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/twitter.md"];
 facebook [shape=egg][color=green][label="Facebook"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/facebook.md"];
 linkedin [shape=egg][color=green][label="Linkedin"][URL="https://github.com/tilnow/tilnow.github.io/edit/master/linkedin.md"];

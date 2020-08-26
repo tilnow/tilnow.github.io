@@ -8,18 +8,18 @@
 digraph G {
 labelloc="t";
 label="map of yak collective IT infrastructure (work in progress)";
-gmail [shape=egg][color=green][label="yakcollective.org@gmail.com"]%%gmail%%;
-calandar [shape=doublecircle][color=green][label="google calandar"]%%calandar%%;
+gmail [shape=egg][color=green][label="yakcollective.org\n@gmail.com"]%%gmail%%;
+calandar [shape=doublecircle][color=green][label="google\ncalandar"]%%calandar%%;
 docs [shape=doublecircle][color=green][label="google docs"]%%docs%%;
-forms [shape=doublecircle][color=green][label="registration form"]%%forms%%;
+forms [shape=doublecircle][color=green][label="registration\nform"]%%forms%%;
 ifttt [shape=egg][color=green][label="IFTT"]%%ifttt%%;
 carl [shape=egg][color=green][label="Carl"]%%carl%%;
 discord [shape=doublecircle][color=green][label="Discord"]%%discord%%;
 dns [shape=egg][color=green][label="Namecheap"]%%dns%%;
 roam [shape=doublecircle][color=green][label="Roam"]%%roam%%;
 substack [shape=triangle][color=green][label="Substack"]%%substack%%;
-blogs [shape=triangle][color=green][label="member blogs"]%%blogs%%;
-websites [shape=triangle][color=green][label="member websites"]%%websites%%;
+blogs [shape=triangle][color=green][label="member\nblogs"]%%blogs%%;
+websites [shape=triangle][color=green][label="member\nwebsites"]%%websites%%;
 twitter [shape=egg][color=green][label="Twitter"]%%twitter%%;
 facebook [shape=egg][color=green][label="Facebook"]%%facebook%%;
 linkedin [shape=egg][color=green][label="Linkedin"]%%linkedin%%;
