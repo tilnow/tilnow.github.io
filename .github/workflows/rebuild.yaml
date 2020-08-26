@@ -21,7 +21,7 @@ jobs:
           set -x
           set -v
           echo before # should use a sed script file, will change after debugging
-          sudo apt-get install graphiz
+          sudo apt-get install graphviz
           sudo apt-get install markdown
           bash after
       - name: step 1 macro-process dotfile
