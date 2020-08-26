@@ -52,15 +52,17 @@ jobs:
           cat showlinkdot.dot
           dot -Tsvg showlinkdot.dot -o displayable.svg
           echo after
-      - name: step 4 process markdowns
+      - name: step 4 process markdowns and cleanup
         run: |
           set -x
           set -v
           echo before
-          for file in md/*.md; do 
+          cm md
+          for file in *.md; do 
           echo "processing $file"
-          markdown "$file" > "${file%.md}.html"; 
+          markdown "$file" > "../${file%.md}.html"; 
           done
+          cd ..
           rm dotinprocess2.dot
           rm editlinkdot.dot
           rm showlinkdot.dot
@@ -68,7 +70,7 @@ jobs:
       - name: step 5 update file with link file
         run: |
             echo before
-            touch -a index.html #so that it will work if we manually changed something on website
+            touch -a index.html #so that it will work if we ran from branch 
             #echo ___ > .gitignore - not clear what to ignore at this point
             git config user.name tilnow
             git config user.email tilnowah@gmail.com
