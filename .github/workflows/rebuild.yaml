@@ -28,7 +28,7 @@ jobs:
         run: |
           set -x
           set -v
-          echo before # should use a sed script file, will change after soem more debugging
+          echo before # should use a sed script file, will change after some more debugging
           sed -E "s/(WEBSERVICE)/[shape=rectangle][color=green]/" editme.dot > dotinprocess.dot
           sed -E "s/(TOOL)/[shape=rectangle][color=blue]/" dotinprocess.dot > dotinprocess1.dot
           sed -E "s/(DATA)/[color=red]/" dotinprocess1.dot > dotinprocess2.dot
@@ -46,7 +46,9 @@ jobs:
           set -x
           set -v
           echo before
+          cat editlinkdot.dot
           dot -Tsvg editlinkdot.dot -o editable.svg
+          cat showlinkdot.dot
           dot -Tsvg showlinkdot.dot -o displayable.svg
           echo after
       - name: step 4 process markdowns
