@@ -57,10 +57,13 @@ jobs:
           set -x
           set -v
           echo before
-          for file in *.md; do 
+          for file in md/*.md; do 
           echo "processing $file"
-          markdown "$file" > "${file%.md}.html"; 
+          markdown "md/$file" > "${file%.md}.html"; 
           done
+          rm dotinprocess2.dot
+          rm editlinkdot.dot
+          rm showlinkdot.dot
           echo after
       - name: step 5 update file with link file
         run: |
