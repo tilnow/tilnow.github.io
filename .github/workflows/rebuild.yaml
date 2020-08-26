@@ -9,7 +9,8 @@
 #5 in future put all of this into _site which will be page actually served
 name: BUILD_DOC
 on:
-  push:
+  #push:
+  workflow_dispatch: #for now, manual, later (after debugging and initial website setup) revert to automatic
 jobs:
   build:
     runs-on: ubuntu-latest
