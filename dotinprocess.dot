@@ -1,0 +1,11 @@
+
+digraph G {
+
+github TOOL;
+netlify [shape=rectangle][color=green];
+jekyll TOOL;
+github->jekyll DATA[label="md files"];
+jekyll->netlify DATA [label="rendered website"];
+netlify->web DATA[label="our website"];
+
+}

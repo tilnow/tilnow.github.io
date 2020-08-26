@@ -1,0 +1,11 @@
+
+digraph G {
+
+github [URL=https://github.com/tilnow/tilnow.github.io/edit/stam.md][shape=rectangle][color=blue];
+netlify [shape=rectangle][color=green];
+jekyll [shape=rectangle][color=blue];
+github->jekyll [color=red][label="md files"];
+jekyll->netlify [color=red] [label="rendered website"];
+netlify->web [color=red][label="our website"];
+
+}

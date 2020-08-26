@@ -28,18 +28,18 @@ jobs:
         run: |
           set -x
           set -v
-          echo before # should use a sed script file, will change after debugging
+          echo before # should use a sed script file, will change after soem more debugging
           sed -E "s/(WEBSERVICE)/[shape=rectangle][color=green]/" editme.dot > dotinprocess.dot
-          sed -E "s/(TOOL)/[shape=rectangle][color=blue]/" dotinprocess.dot > dotinprocess.dot
-          sed -E "s/(DATA)/[color=red]/" editme.dot > dotinprocess.dot
+          sed -E "s/(TOOL)/[shape=rectangle][color=blue]/" dotinprocess.dot > dotinprocess1.dot
+          sed -E "s/(DATA)/[color=red]/" dotinprocess1.dot > dotinprocess2.dot
           echo after
       - name: step 2 make two dotfiles
         run: |
           set -x
           set -v
           echo before
-          sed -E "s/%%([a-zA-Z0-9\/-])%%/[URL=https:\/\/github.com\/tilnow\/tilnow.github.io\/edit\/\1.md]/" dotinprocess.dot > editlinkdot.dot
-          sed -E "s/%%([a-zA-Z0-9\/-])%%/[URL=https:\/\/raw.githubusercontent.com\/tilnow\/tilnow.github.io\/master\/\1.html]/" dotinprocess.dot > showlinkdot.dot
+          sed -E "s/%%([a-zA-Z0-9\/-]+)%%/[URL=https:\/\/github.com\/tilnow\/tilnow.github.io\/edit\/\1.md]/" dotinprocess2.dot > editlinkdot.dot
+          sed -E "s/%%([a-zA-Z0-9\/-]+)%%/[URL=https:\/\/raw.githubusercontent.com\/tilnow\/tilnow.github.io\/master\/\1.html]/" dotinprocess2.dot > showlinkdot.dot
           echo after
       - name: step 3 build two svgs
         run: |
