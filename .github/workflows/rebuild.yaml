@@ -57,7 +57,7 @@ jobs:
           set -x
           set -v
           echo before
-          cm md
+          cd md
           for file in *.md; do 
           echo "processing $file"
           markdown "$file" > "../${file%.md}.html"; 
