@@ -52,7 +52,7 @@
 <!-- netlify&#45;&gt;web -->
 <g id="edge3" class="edge">
 <title>netlify&#45;&gt;web</title>
-<g id="a_edge3"><a xlink:href="https://tilnow.github.io/website.html" xlink:title="our website">
+<g id="a_edge3"><a xlink:href="https://tilnow.github.io/rendered website.html" xlink:title="our website">
 <path fill="none" stroke="#ff0000" d="M27,-86.9735C27,-75.1918 27,-59.5607 27,-46.1581"/>
 <polygon fill="#ff0000" stroke="#ff0000" points="30.5001,-46.0033 27,-36.0034 23.5001,-46.0034 30.5001,-46.0033"/>
 </a>
