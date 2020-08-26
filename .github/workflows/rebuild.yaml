@@ -59,7 +59,7 @@ jobs:
           echo before
           for file in md/*.md; do 
           echo "processing $file"
-          markdown "md/$file" > "${file%.md}.html"; 
+          markdown "$file" > "${file%.md}.html"; 
           done
           rm dotinprocess2.dot
           rm editlinkdot.dot
