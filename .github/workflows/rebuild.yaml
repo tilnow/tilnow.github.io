@@ -64,7 +64,7 @@ jobs:
           done
           cd ..
           rm dotinprocess2.dot
-          rm editlinkdot.dot
+          #rm editlinkdot.dot #temp expose file for docjs
           rm showlinkdot.dot
           echo after
       - name: step 5 push new html pages and new svg files to github for publication
