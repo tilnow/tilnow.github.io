@@ -5,6 +5,15 @@
 # all other dot thingees apply
 # rendering is using plain dot
 
+#{ #start substitution definitions no spaces before name. hash (#) after name. comment optional
+#[shape=doublecircle][color=green]#[shape=doublecircle][color=green] #a site we expect _members_ (or at least non-sys admins) to use the site-provided ui sometimes
+#[shape=egg][color=green]#[shape=egg][color=green] #mainly used to transform data. of course, somebody needs to use the ui at some point
+#[shape=triangle][color=green]#[shape=triangle][color=green] #something individual members deal with indepdnent of YC
+#[shape=rectangle][color=blue]#[shape=rectangle][color=blue] # a software tool
+#[color=red]#[color=red] #data
+#[color=black]#[color=black] #a function
+#} #end substitution definitions
+
 digraph G {
 labelloc="t";
 label="map of yak collective IT infrastructure (work in progress)";
